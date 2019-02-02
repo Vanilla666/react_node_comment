@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>React Tutorial</title>
-    <!-- Not present in the tutorial. Just for basic styling. -->
-    <link rel="stylesheet" href="css/base.css" />
-    <script src="https://unpkg.com/react@15.3.0/dist/react.js"></script>
-    <script src="https://unpkg.com/react-dom@15.3.0/dist/react-dom.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-    <script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/remarkable@1.7.1/dist/remarkable.min.js"></script>
-  </head>
-  <body>
-    <div id="content"></div>
-    <script type="text/babel" src="scripts/example.js"></script>
-    <script type="text/babel">
-      // To get started with this tutorial running your own code, simply remove
-      // the script tag loading scripts/example.js and start writing code here.
+
+<head>
+  <meta charset="utf-8">
+  <title>React Tutorial</title>
+  <!-- Not present in the tutorial. Just for basic styling. -->
+  <link rel="stylesheet" href="css/base.css" />
+  <script src="https://unpkg.com/react@15.3.0/dist/react.js"></script><!-- 引用react  -->
+  <script src="https://unpkg.com/react-dom@15.3.0/dist/react-dom.js"></script><!-- 引用react DOM -->
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script><!-- 引用babel -->
+  <script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script><!-- 引用jquery -->
+  <script src="https://unpkg.com/remarkable@1.7.1/dist/remarkable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script> <!-- 引入Markdown語法 -->
+</head>
+
+<body>
+  <div id="content"></div>
+  <!-- <script type="text/babel" src="scripts/example.js"></script> -->
+  <script type="text/babel" src="scripts/tutorial1.js"></script> <!--  JSX 轉 JS 用 Babel 讓瀏覽器能看懂 ES2015 與 JSX 語法 -->
+  <script type="text/babel"> // JSX 轉 JS 用 Babel 讓瀏覽器能看懂 ES2015 與 JSX 語法
+
+     
     </script>
-  </body>
+</body>
+
 </html>
