@@ -27,7 +27,7 @@ var CommentBox = React.createClass({ //創建一個 react 組件 CommentBox
             data: comment,//傳遞打包好的json格式資料
             success: function (data) {//成功時把拿到的資料印出
                 console.log(data);
-                this.setState({ cc: data }); // 更新資料 key :value
+                this.setState({ data: data }); // 更新資料 key :value
             }.bind(this), //綁定到CommentBox這個物件 
             error: function (xhr, status, err) { //失敗時印出錯誤資訊
                 console.error(this.props.url, status, err.toString());
