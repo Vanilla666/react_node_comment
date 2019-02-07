@@ -48,7 +48,7 @@ var CommentBox = React.createClass({ //創建一個 react 組件 CommentBox
         return ( //返回的炫覽
             <div className="commentBox"> {/* className 套用的CSS */}
                 <h1>Comments</h1>
-                <CommentList data={this.state.data} /> {/* 自定義xx屬性 {this.props.data_comment}放資料傳遞過去 自定義好後就可以使用自訂義組件 */}
+                <CommentList data={this.state.data} /> {/* 自定義xx屬性 {this.props.data}放資料傳遞過去 自定義好後就可以使用自訂義組件 */}
                 <CommentForm onCommentSubmit={this.handleCommentSubmit} /> {/* 傳遞一個新的回調函數（handleCommentSubmit）到子組件完成這件事，綁定它到子組件的onCommentSubmit事件上。無論事件什麼時候觸發，回調函數都將被調用 */}
             </div>
         );
@@ -57,7 +57,7 @@ var CommentBox = React.createClass({ //創建一個 react 組件 CommentBox
 
 var CommentList = React.createClass({ //創建一個 react 組件 CommentList
     render: function () {
-        var commentNodes = this.props.data.map(function (comment, i) { //迭代每個接收的數據,做回乎函數 comment 指的是接收的數據this.props.data_comment i指的是索引值
+        var commentNodes = this.props.data.map(function (comment, i) { //迭代每個接收的數據,做回乎函數 comment 指的是接收的數據this.props.data i指的是索引值
             return (
                 <Comment key={i} author={comment.author}> {/* author 屬性 接收迭代屬性 */}
                     {comment.text} {/* text 屬性 接收迭代屬性 */}
@@ -122,7 +122,7 @@ var Comment = React.createClass({ //創建一個 react 組件 Comment
 });
 
 ReactDOM.render( //炫覽的 react 元件
-    <CommentBox url="/api/comments" pollInterval={2000} />, //  自訂義屬性data_comment,pollInterval {data} {放表達式或React組件} {2000}每2秒
+    <CommentBox url="/api/comments" pollInterval={5000} />, //  自訂義屬性data_comment,pollInterval {data} {放表達式或React組件} {2000}每2秒
     document.getElementById('content') //放在 div id=content
 );
 
